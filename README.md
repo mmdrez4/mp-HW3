@@ -88,8 +88,8 @@ have been added successfully! <br />
 enter the name of the category: <br />
 category1<br />
 category1: <br />
-   1. todo1<br />
-   2. todo2<br />
+    1. todo1<br />
+    2. todo2<br />
 
 <p dir="rtl">
 با وارد کردن عدد 9 برنامه ما پایان می یابد!
