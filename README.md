@@ -66,7 +66,8 @@ titles and contents of the Todos:<br />
 2. todo2 content2<br />
 enter the titles you want to add (seperated by a white space): <br />
 todo1 todo2<br />
-have been added successfully!<br />
+have been added successfully! <br />
+<br />
 
 <p dir="rtl">
 برای مشاهده ی todo های متعلق به یک category خاص باید ابتدا عدد 8 را وارد کنیم سپس نام category خواسته می شود و پس از وارد کردن نام آن در صورتی که دسته ای با این نام موجود باشد todo های زیرمجموعه آن به نمایش در می آیند.  به مثال زیر دقت کنید:
