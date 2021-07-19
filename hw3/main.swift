@@ -88,8 +88,12 @@ class Todo{
             Todo.findTodo(title: name)!.content = changedParameter
             return true
         case "3":
-            Todo.findTodo(title: name)!.priority = Int(changedParameter) ?? Todo.findTodo(title: name)!.priority
-            return true
+            if changedParameter.isInt {
+                Todo.findTodo(title: name)!.priority = Int(changedParameter) ?? Todo.findTodo(title: name)!.priority
+                return true
+            }else{
+                return false
+            }
         default:
             return false
         }
@@ -134,12 +138,18 @@ while true{
             let todoContent = readLine()
             print("Input the priority: ")
             let todoPriority = readLine()
-            if (todoPriority!.isInt) {
-                _ = Todo(title: todoTitle!, content: todoContent!, priority: Int(todoPriority ?? "1")!)
-                print("you successfully add a new Todo")
+            let myTodo = Todo.findTodo(title: todoTitle ?? "nothing")
+            if myTodo == nil {
+                if (todoPriority!.isInt) {
+                    _ = Todo(title: todoTitle!, content: todoContent!, priority: Int(todoPriority ?? "1")!)
+                    print("you successfully add a new Todo")
+                }else{
+                    print("Priority should be integer!")
+                }
             }else{
-                print("Priority should be integer!")
+                print("There is a todo with the same title! you have to choose a unique title.")
             }
+            
         } else if menu == 2{
             var i = 1
             for todo in Todo.todoList {
@@ -171,34 +181,48 @@ while true{
         } else if menu == 5{
             print("enter the parameter you want to be sorted by: 1.time 2.title 3.priority: ", terminator: "")
             let parameter = readLine()
-            print("enter the method you want to sort: 1.ascending 2.descending: ", terminator: "")
-            let method = readLine()
-            listOfTodos = Todo.sort(parameter: parameter ?? "1")
-            if method == "2" {
-                listOfTodos.reverse()
-            }
-            var i = 1
-            for todo in listOfTodos {
-                print("\(i). \(todo.title) \(todo.content) \(todo.priority)")
-                i+=1
+            if parameter == "1" || parameter == "2" || parameter == "3" {
+                print("enter the method you want to sort: 1.ascending 2.descending: ", terminator: "")
+                let method = readLine()
+                if method == "1" || method == "2"  {
+                    listOfTodos = Todo.sort(parameter: parameter ?? "1")
+                    if method == "2" {
+                        listOfTodos.reverse()
+                    }
+                    var i = 1
+                    for todo in listOfTodos {
+                        print("\(i). \(todo.title) \(todo.content) \(todo.priority)")
+                        i+=1
+                    }
+                }else{
+                    print("input a number from 1 to 2!")
+                }
+            }else{
+                print("input a number from 1 to 3!")
             }
         } else if menu == 6{
             print("enter the name of the category: ")
             let categoryName = readLine()
-            _ = Category(name: categoryName!)
-            print("you successfully create a new category!")
+            let myCategory = Category.getByName(name: categoryName ?? "nothing")
+            if myCategory == nil {
+                _ = Category(name: categoryName!)
+                print("you successfully create a new category!")
+            }else{
+                print("There is a todo with the same title! you have to choose a unique title.")
+            }
+            
         } else if menu == 7{
             print("enter the name of the category: ")
             let categoryName = readLine()
             let category = Category.getByName(name: categoryName!)
             if category != nil {
-                print("type titles you want to add to this category(seperated by white space)")
+                print("titles and contents of the Todos:")
                 var i = 1
                 for todo in Todo.todoList {
                     print("\(i). \(todo.title) \(todo.content)")
                     i+=1
                 }
-                print("enter the titles you want to add: ")
+                print("enter the titles you want to add (seperated by a white space): ")
                 let str = readLine()
                 let ids = str?.components(separatedBy: " ")
                 var flag = 0
@@ -210,7 +234,7 @@ while true{
                 }
                 if flag == 0 {
                     category!.addTodos(Ids: ids!)
-                    print("have been added successfully")
+                    print("have been added successfully!")
                 }else{
                     print("please input the existing titles!!")
                 }
