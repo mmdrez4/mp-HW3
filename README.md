@@ -44,10 +44,14 @@ choose the Menu: <br />
 </p>
 
 <p dir="rtl">
-برای sort کردن باید عدد 5 را وارد کنیم سپس دستور زیر به نمایش در میاید:
-enter the parameter you want to be sorted by: 1.time 2.title 3.priority:
-کافی است یکی از اعداد ۱ یا ۲ یا ۳ را وارد کنیم و پس از وارد کردن عدد مورد نظر دستور زیر پس از آن به نمایش در میاید:
-enter the method you want to sort: 1.ascending 2.descending:
+برای sort کردن باید عدد 5 را وارد کنیم سپس دستور زیر به نمایش در میاید:<br />
+</p>
+enter the parameter you want to be sorted by: 1.time 2.title 3.priority: <br />
+<p dir="rtl">
+کافی است یکی از اعداد ۱ یا ۲ یا ۳ را وارد کنیم و پس از وارد کردن عدد مورد نظر دستور زیر پس از آن به نمایش در میاید: <br />
+</p>
+enter the method you want to sort: 1.ascending 2.descending: <br />
+<p dir="rtl">
 یکی از اعداد ۱ یا ۲ را وارد میکنیم و پس از آن لیست ما مرتب شده به صورت مورد نظر ما نمایش داده می شود.
 </p>
 
