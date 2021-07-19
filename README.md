@@ -7,8 +7,10 @@ team members:
     Kahbod Aeini - id:98101209
 
     Dariush amiri - id:98101182
-
+<p dir="rtl">
 ابتدا لیست دستورات به صورت زیر نمایش داده میشود: <br />
+</p>
+
 choose the Menu: <br />
 1.add new todo <br />
 2.show Todo List <br />
