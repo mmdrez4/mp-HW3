@@ -58,25 +58,25 @@ enter the method you want to sort: 1.ascending 2.descending:
 <p dir="rtl">
 برای امکان اضافه کردن یک یا چند آیتم todo به یک دسته ابتدا عدد 7 را وارد می کنیم سپس اسم دسته ای که میخواهیم را وارد می کنیم و سپس title تودو ها و content آن ها نمایش داده می شود. حال title تودو مورد نظر خود را نوشته و با این کار این todo به category مورد نظر اضافه می شود. اگر چند todo را بخواهیم به category مورد نظر اضافه کنیم باید title آن ها را با یک فاصله از یکدیگر وارد کنیم. به مثال زیر دقت کنید:
 </p>
-7
-enter the name of the category: 
-category1
-titles and contents of the Todos:
-1. todo1 content1
-2. todo2 content2
-enter the titles you want to add (seperated by a white space): 
-todo1 todo2
-have been added successfully!
+7<br />
+enter the name of the category: <br />
+category1<br />
+titles and contents of the Todos:<br />
+1. todo1 content1<br />
+2. todo2 content2<br />
+enter the titles you want to add (seperated by a white space): <br />
+todo1 todo2<br />
+have been added successfully!<br />
 
 <p dir="rtl">
 برای مشاهده ی todo های متعلق به یک category خاص باید ابتدا عدد 8 را وارد کنیم سپس نام category خواسته می شود و پس از وارد کردن نام آن در صورتی که دسته ای با این نام موجود باشد todo های زیرمجموعه آن به نمایش در می آیند.  به مثال زیر دقت کنید:
 </p>
-8
-enter the name of the category: 
-category1
-category1: 
-   1. todo1
-   2. todo2
+8<br />
+enter the name of the category: <br />
+category1<br />
+category1: <br />
+   1. todo1<br />
+   2. todo2<br />
 
 <p dir="rtl">
 با وارد کردن عدد 9 برنامه ما پایان می یابد!
