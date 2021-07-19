@@ -8,17 +8,18 @@ team members:
 
     Dariush amiri - id:98101182
 
-ابتدا لیست دستورات به صورت زیر نمایش داده میشود:
-choose the Menu: 
-1.add new todo 
-2.show Todo List 
-3.change 
-4.delete 
-5.sort 
-6.create a category 
-7.add todos to the categories 
-8.show category 
-9.exit
+ابتدا لیست دستورات به صورت زیر نمایش داده میشود: <br />
+choose the Menu: <br />
+1.add new todo <br />
+2.show Todo List <br />
+3.change <br />
+4.delete <br />
+5.sort <br />
+6.create a category <br />
+7.add todos to the categories <br />
+8.show category <br />
+9.exit<br />
+
 بعد از اجرای هر دستور به طور کامل نیز لیست بالا برای راهنمایی باز هم print می شود تا دستور مورد نظر را به راحتی انتخاب کنید. لازم به ذکر است در کل کد برای انتخاب هر دستور فقط و فقط عدد مربوطه را وارد می کنیم. برای مثال برای دستور add new todo تنها عدد 1 را وارد می کنیم. در این کد فرض شده که title ها unique هستند و دو todo نمیتوانند با title یکسان وجود داشته باشند.
 
 اضافه کردن todo به این صورت است که پس از وارد کردن عدد 1 به ترتیب title و contentو priority از ما پرسیده می شود و priority حتما باید int باشد در غیر این صورت todo جدید ایجاد نمی شود و دوباره باید از اول دستور 1 را بزنیم و موارد مورد نیاز را وارد کنیم. پس از ساخته شدن todo پیغام متناسب با آن چاپ می شود.
